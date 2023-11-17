@@ -30,7 +30,9 @@ class Example(PyQt5.QtWidgets.QWidget):
 
     def draw_flag(self, qp):
         r = random.randint(1, 100)
-        qp.setBrush(PyQt5.QtGui.QColor(255, 255, 0))
+        qp.setBrush(PyQt5.QtGui.QColor(
+            random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)
+        ))
         qp.drawEllipse(
             random.randint(1, 100),
             random.randint(1, 100),
